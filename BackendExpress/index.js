@@ -95,28 +95,21 @@ app.post('/ngram',async(req, res) => {
     Ngram1:all[all.length -1].Ngram,
     Ngram2:all[all.length -2].Ngram
   }
-
-  const resdata=await axios.post(`${endpoint}`,data)
-  console.log(resdata.data);
-  res.status(200).json(resdata.data); 
-})
   
+  const resdata=await axios.post(endpoint, data).then(res => res.data).catch(console.log)
+  if(resdata)
+    res.status(200).send(resdata); 
+  else
+  res.status(500).send("Internal server error");
+})
 
 
-
-
-mongoose.connect(process.env.MONGO_URL,{
-   useNewUrlParser:true,
-   useUnifiedTopology:true,
-
-}).then(()=>{
-   console.log('datbase connected')
+mongoose.connect(process.env.MONGO_URL).then(()=>{
+  console.log('datbase connected')
+  const PORT=process.env.PORT||6001;
+  app.listen(PORT,()=>console.log(`Server Port :${PORT}`));
 })
 .catch((error)=>console.log(`${error} did not connect`));
-
-const PORT=process.env.PORT||6001;
-app.listen(PORT,()=>console.log(`Server Port :${PORT}`));
-
 
 
 
