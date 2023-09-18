@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-vhiz%tu=g*@cyg%ol3ap+k6hx8h7=xu^0ah9l%)2#+(3%_scc%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['*']
+CORS_ORIGIN_ALLOW_ALL=True
+
 
 
 # Application definition
@@ -78,11 +80,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'ngramapi.wsgi.application'
 
-
-CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = (
-    'http://localhost:6001',
-)
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
