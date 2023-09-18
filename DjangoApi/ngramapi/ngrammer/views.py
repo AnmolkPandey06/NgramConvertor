@@ -5,6 +5,7 @@ from django.http import JsonResponse
 import json
 
 import nltk
+# nltk.download('punkt')
 from nltk.util import ngrams
 
 def extract_ngrams(data, num):
