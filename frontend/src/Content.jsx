@@ -66,7 +66,7 @@ function Content() {
               fullWidth
               onClick={handleButtonClick}
             >
-              Show Result
+              Show Result Now
             </Button>
           </Grid>
           {resultcur && resultprev && (
