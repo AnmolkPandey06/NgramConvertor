@@ -1,2 +1,3 @@
-# This is NgramConvertor
+# This is NgramConvertor and conflicts are resolved .
+
 
