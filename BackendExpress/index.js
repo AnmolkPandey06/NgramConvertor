@@ -9,7 +9,7 @@ import mysql from 'mysql2'
 import Sentence from "./models/sentence.js";
 import Log from "./models/logs.js";
 import axios from 'axios'
-const endpoint="http://localhost:8000/"
+const endpoint="http://127.0.0.1:8000/nltk/"
 dotenv.config();
 const app=express();
 app.use(express.json());//to tell the server ki take the json data
