@@ -9,7 +9,8 @@ import mysql from 'mysql2'
 import Sentence from "./models/sentence.js";
 import Log from "./models/logs.js";
 import axios from 'axios'
-const endpoint="http://127.0.0.1:8000/nltk/"
+import ip from 'ip'
+const endpoint="http://10.0.13.174:8000/nltk/"
 dotenv.config();
 const app=express();
 app.use(express.json());//to tell the server ki take the json data
@@ -95,7 +96,7 @@ app.post('/ngram',async(req, res) => {
     Ngram1:all[all.length -1].Ngram,
     Ngram2:all[all.length -2].Ngram
   }
-  
+ 
   const resdata=await axios.post(endpoint, data).then(res => res.data).catch(console.log)
   if(resdata)
     res.status(200).send(resdata); 
@@ -107,7 +108,7 @@ app.post('/ngram',async(req, res) => {
 mongoose.connect(process.env.MONGO_URL).then(()=>{
   console.log('datbase connected')
   const PORT=process.env.PORT||6001;
-  app.listen(PORT,()=>console.log(`Server Port :${PORT}`));
+  app.listen(PORT,"0.0.0.0",()=>console.log(`Server Port :${PORT}`));
 })
 .catch((error)=>console.log(`${error} did not connect`));
 
