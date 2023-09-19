@@ -1,0 +1,40 @@
+{  
+
+
+  "theme_color" : "#000000",
+  "background_color" : "#000000",
+  "display" : "standalone",
+  "scope" : "/",
+  "start_url" : "/",
+  "name" : "N gram Generator",
+  "short_name" : "N gram Gen",
+  "icons": [
+    {
+      "src": "mascable_icon.png",
+      "type": "image/png",
+      "sizes": "196x196",
+      "purpose":"any maskable"
+    },
+    {
+      "src": "192pngtree.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "256pngtree.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "384pngtree.png",
+      "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "512pngtree.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+  
+}
