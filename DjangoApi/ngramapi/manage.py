@@ -4,7 +4,7 @@ import os
 import sys
 import nltk
 
-nltk.data.path.append(".")
+nltk.data.path.append("./nltk_data")
 
 
 def main():

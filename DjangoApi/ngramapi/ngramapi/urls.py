@@ -19,7 +19,7 @@ from django.urls import path
 from ngrammer.views import *
 
 urlpatterns = [
-    path('',home),
+    path('nltk/',home),
     path('admin/', admin.site.urls),
 
 ]
